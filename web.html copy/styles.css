@@ -1,21 +1,3 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background: #4b4646;
-}
-.hero{
-   color: white;
-    height: 100vh;
-    background-image: url('Code girl.jpg')no-repeat center
-     center/cover;
-    position: relative;}
-    .navbar{
-        display: flex;
-        justify-content: space-between;
-        padding: 20px;
-    }
-    
 
 
 
