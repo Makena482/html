@@ -1,0 +1,990 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+     initial-scale=1.0">
+
+        <title>My Website</title>
+        
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+         <script src="script.js"></script>
+<img src="images/pic.jpg">
+         
+       
+        <style>
+
+             *{ box-sizing: border-box
+                ;margin: 0;
+                padding: 0;
+                font-family: sans-serif;
+                
+            }
+            body{
+                padding-top: 5px;
+                background-color: #0f172a;
+                 
+                
+                
+            }
+          
+           /* Hero/ Navbar */
+            
+            
+            .hero{
+             margin-top: 0;
+             width: 100%;
+             top: 0;
+             z-index: 1000;
+            }
+           
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    
+   
+}
+
+
+.logo {
+    
+    width: 6.25rem;
+    height: 2.5rem;
+    color: rgb(98, 64, 98);
+    fill: currentColor;
+    display: block;
+    font-size: 25px;
+    
+    
+    
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    position: relative;
+}
+
+
+.nav-links li a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background: #ff9800;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #bb2d2d;
+}
+
+
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+        color:rgb(202, 40, 40);
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: #111;
+        width: 200px;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px;
+        display: none;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+    .nav-links {
+    transform: translateX(100%);
+    transition: 0.3s;
+}
+
+.nav-links.active {
+    transform: translateX(0);
+    display: flex;
+    background: black;
+}
+}
+section{
+    
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+overflow: hidden;
+}
+/* home section */
+            #home{
+               background: #0f172a;
+
+               padding:150px 10%;
+               
+            }
+            .home-container{
+                font-size: 30px;
+                
+               
+               
+                margin-left: 0;
+            }
+            .home-container img{
+                display: block;
+                width: 100%;
+                float: right;
+                height: 100%;
+                border-radius: 10px;
+
+            }
+            .home-text{
+                align-items: start;
+            }
+            .home-title{
+color: #a18585;
+            }
+            .highlight{
+              color:rgb(125, 80, 125);  
+            }
+            .home-subtitle{
+                color: #a47c7c;
+            }
+            .home-container img{
+                width: 300px;
+            }
+            
+@media (max-width: 768px) {
+
+    #home {
+        padding: 80px 5%;
+        text-align: center;
+    }
+
+    .home-container {
+        font-size: 18px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home-container img {
+        width: 200px;
+        height: auto;
+        float: none; 
+        margin-top: 20px;
+        border-radius: 2px;
+    }
+
+    .home-text {
+        align-items: center;
+    }
+
+    .home-title {
+        font-size: 24px;
+       color: #a18585;
+    }
+
+    .home-subtitle {
+        font-size: 16px;
+       color: #a47c7c;
+    }
+
+    .highlight {
+        color:rgb(125, 80, 125) ;
+    }
+}
+.divider-angle {
+  width: 100%;
+  height: 50px;
+  background: #fff;  
+  clip-path: polygon(0 0, 100% 100%, 100% 0, 0 0);
+}
+            
+            /* about section */
+          .about-section {
+  display: flex;             
+  align-items: center;
+  gap: 40px;                
+  padding: 80px 10%;
+  flex-wrap: wrap;           
+  
+}
+
+.about-section img {
+  width: 100%;               
+  max-width: 300px;         
+  height: auto;             
+  object-fit: cover;         
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.about-text {
+  max-width: 500px;
+}
+
+.about-text p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: white;
+  text-align: justify;
+  border-left: 4px solid crimson;
+  padding-left: 15px;
+}
+
+.about-text p::first-letter {
+  font-size: 2.2em;
+  font-weight: bold;
+  color: crimson;
+}
+
+.download-cv-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: crimson;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.download-cv-btn:hover {
+  background: darkred;
+  transform: translateY(-3px);
+}
+
+
+@media (max-width: 768px) {
+
+
+  
+  .about-section {
+    display: flex;
+    flex-direction: column;   
+    align-items: center;      
+    
+    padding: 20px 10px;
+    min-height: auto;        
+    box-sizing: border-box;
+  }
+
+  .about-section img {
+    width: 150px;           
+    height: auto;             
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .about-text {
+    max-width: 100%;
+    text-align: center;       
+    margin-bottom: 20px;
+  }
+
+  .about-text p {
+    border-left: none;
+    padding-left: 0;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .download-cv-btn {
+    display: inline-block;    
+    padding: 10px 20px;
+    font-size: 14px;
+    
+  }
+}
+      /* services section */      
+     #services{
+  
+  padding: 80px 5%;
+}
+
+.work-section{
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap; 
+}
+
+.service-card{
+  
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 15px;
+  width: 30%; 
+  transition: 0.3s;
+}
+
+.service-card img{
+  width: 100%;
+  height: 250px;
+object-fit: contain;
+}
+
+.service-title{
+  font-style: italic;
+  color: rgb(123, 123, 155);
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+.service-description{
+  font-size: 16px;
+  color: rgb(73, 73, 142);
+}
+
+
+.service-card:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+
+@media (max-width: 768px) {
+
+  .work-section {
+    display: flex;
+    flex-direction: row;    
+    flex-wrap: nowrap;      
+    overflow-x: auto;       
+    gap: 15px;
+    padding-bottom: 10px;
+  }
+
+  .service-card {
+    min-width: 200px;       
+    flex: 0 0 auto;         
+    height: auto;           
+    padding: 15px;
+    box-sizing: border-box; 
+  }
+
+  .service-card img {
+    width: 100%;
+    height: 150px;          
+    object-fit: cover;
+  }
+
+  .service-title {
+    font-size: 14px;
+    margin: 10px 0 5px;
+  }
+
+  .service-description {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+}
+.divider-angle1 {
+  width: 100%;
+  height: 70px;               
+  background: #7f5858;         
+  clip-path: ellipse(100% 50% at 50% 0%); 
+}
+
+
+
+/* projects section */
+
+            .projects-container{
+      
+                 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+}
+                 
+                 
+            .card{
+                width: 300px;
+                height: 300px;
+                padding: 20px;
+                
+                cursor: pointer;
+                touch-action: manipulation;
+                transition: transform 0.3s ease;
+               
+            }
+             .card i{
+               color: #b57000;
+                display: block;
+                margin-bottom: 10px;
+            }
+             .card h3{
+                color: rgb(41, 5, 5);
+                font-size: 20px;
+                margin-top: 10px 0;
+            }
+             .card p{
+                color: black;
+                font-size: 16px;
+                margin-top: 10px;
+            }
+         
+            
+       .card h3 span{
+        color: rgb(97, 15, 15);
+       } 
+       .card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+   transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transform-style: preserve-3d;
+}
+
+.card.flip .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+
+.card-front {
+    background: rgb(25, 207, 248);
+    color: #333;
+}
+
+.card-front i {
+    font-size: 2rem;
+    color: rgb(77, 77, 12);
+    margin-bottom: 10px;
+}
+
+
+.card-back {
+    background: #0077b5;
+    color: #fff;
+    transform: rotateY(180deg);
+}
+.card:hover{
+    transform: translateY(-10px) scale(1.05);
+   
+
+}
+
+
+@media (max-width: 768px) {
+.projects-container {
+  display: flex;
+  overflow-x: auto;             
+  gap: 15px;
+  padding: 20px 15px;         
+  scroll-snap-type: x mandatory; 
+  scroll-behavior: smooth;
+}
+
+
+.card {
+  min-width: 50%;                
+  flex: 0 0 auto;              
+  scroll-snap-align: start;   
+}
+
+}
+
+
+/* contact section */
+
+#contact {
+    padding: 60px 20px;
+    
+    font-family: 'Arial', sans-serif;
+    
+}
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+
+.contact-left {
+    flex: 1 1 300px;
+}
+
+.contact-left h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: black;
+    font-weight: bold;
+}
+
+.contact-left p {
+    font-size: 1rem;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgb(149, 26, 26);
+}
+
+.contact-left i {
+    color: #1592db; 
+    font-size: 1.2rem;
+}
+
+
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #333;
+    transition: color 0.3s;
+
+}
+
+.social-icons a:hover {
+    color: #0077b5;
+}
+
+
+.contact-right {
+    flex: 1 1 300px;
+    padding: 30px;
+    border-radius: 10px;
+   
+}
+.contact-right input,
+.contact-right textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.contact-right input:focus,
+.contact-right textarea:focus {
+    border-color: #0077b5;
+}
+
+.contact-right textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.contact-right button {
+    padding: 12px 25px;
+    background-color: #0077b5;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-right button:hover {
+    background-color: #005f8a;
+}
+
+
+#form-status {
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+
+  .contact-container {
+    display: flex;
+    flex-direction: column;    
+    gap: 30px;                   
+    padding: 0 15px;            
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .contact-left {
+    flex: 1 1 auto;             
+    min-width: 0;                
+    max-width: 100%;            
+    text-align: center;           
+  }
+  .contact-right {
+    flex: 1 1 auto;              
+    min-width: 0;               
+    max-width: 100%;
+  }
+
+  .contact-right form {
+    width: 100%;                 
+  }
+
+  .contact-right input,
+  .contact-right textarea {
+    width: 100%;                 
+  }
+
+  .social-icons {
+    justify-content: center;     
+  }
+
+}
+.divider-line3{
+    height: 4px;                 
+  width: 80%;                 
+  background: linear-gradient(to right, #ff4e50, #f9d423); 
+  margin: 20px auto;           
+  border-radius: 2px;          
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+
+
+        </style>
+    </head> 
+    <body class="body">
+       
+       
+          <header class="hero">
+            <nav class="navbar">
+                
+                    <h1 class="logo">BRIDGETTE</h1>
+                    <ul class="nav-links" id="navlinks">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#projects">My work</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                    
+    <div class="menu-toggle" id="menuToggle">
+        ☰
+    </div>
+                  </nav>
+
+          </header>
+          <div class="divider-line3"></div>
+          <div class="container">
+            <!-- Home Section -->
+
+          
+          <section id="home" >
+            <div class="home-container">
+                <img src="PC aesthetic.jpg" alt="">
+                <div class="home-text">
+                <h1 class="home-title">
+                    Hi I'm <span class="highlight">Bridgette</span>
+
+                </h1>
+                <p class="home-subtitle">
+                    Electrical Engineer |UI/UX Designer|
+                    <br> Web Developer
+                </p>
+
+            
+            </div>
+            </div>
+
+
+
+
+            </section>
+            <div class="divider-angle"></div>
+            <!-- About Section -->
+
+          
+          <section id="about" class="about-section" >
+            <img src="Code girl.jpg" alt="">
+              <div class="about-text">
+                <p >
+                    My work focuses on solving problems in the tech
+                     field by understanding users and designing intuitive
+                      solutions that address their needs. I enjoy
+                       coding, which strengthens my ability to approach
+                        both web and electrical
+                     challenges with a structured and analytical mindset.
+
+                </p>
+                <a href="Bridget Makena _Curriculum Vitae 55g.docx"
+                 download class="download-cv-btn">Download CV</a>
+                 </div>
+          </section>
+          <!-- Service Section -->
+          
+          <section id="services">
+            <div class="work-section">
+            
+               
+                <div class="service-card">
+                   <img src="electric.jpg
+                   " alt="">
+                  <p class="service-title">
+                    Electrical Engineering </p>
+<p class="service-description"> I apply analytical problem-solving to design, 
+analyze, and troubleshoot electrical
+ systems, ensuring reliable
+and efficient performance across different applications
+                   </p> 
+                </div>
+
+
+
+                <div class="service-card">
+                    <img src="Get a Stunning UI_UX Design for Your Brand 🎨.jpg" alt="">
+                <p class="service-title">
+                    UI/UX Design 
+                </p>
+                <p class="service-description"> I identify user needs and 
+                    design solutions that are intuitive and
+                     aligned with how users interact with 
+                     digital products.</p>
+  </div>
+                <div class="service-card">
+                    <img src="Backlink maker and generator online _ small seo tools.jpg" alt="">
+                <p class="service-title">Web Development</p>
+                <p class="service-description">
+I develop user-centered
+ websites using clean and structured code, 
+ focusing on functionality, performance,
+  and a seamless user experience.
+                </p>
+                
+                </div>
+                </div>
+                </section>
+
+                <div class="divider-angle1"></div>
+                
+
+<!-- projects Section -->
+             <section id="projects" class="projects-container">
+
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-front">
+        <i class="fas fa-microchip"></i>
+        <h3>Project <span>01</span></h3>
+      </div>
+      <div class="card-back">
+        <p>
+          An engineering-based solution where I applied analytical thinking 
+          to design and troubleshoot a system, ensuring efficiency and reliability.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-front">
+        <i class="fas fa-pencil-ruler"></i>
+        <h3>Project <span>02</span></h3>
+      </div>
+      <div class="card-back">
+        <p>
+          A user-focused design project aimed at simplifying interactions 
+          and enhancing the overall experience through intuitive layout.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-front">
+        <i class="fas fa-laptop-code"></i>
+        <h3>Project <span>03</span></h3>
+      </div>
+      <div class="card-back">
+        <p>
+          Designed and developed a responsive web interface focused on 
+          usability and seamless user experience.
+        </p>
+      </div>
+    </div>
+  </div>
+
+</section>
+       
+<!-- Contact Section -->
+    
+   
+     <section id="contact">
+    <div class="contact-container">
+        
+        <div class="contact-left">
+            <h2>Contact Me</h2>
+            <p><i class="fas fa-envelope"></i>bridgetmakena1@gmail.com
+            </p>
+            <p><i class="fas fa-phone"></i> +254 727 314 847</p>
+
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/bridget-makena-905b50394"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Makena482"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/iam_makenaa?igsh=MXd5dmg5a2s4dW91Mg=="><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+       <div class="contact-right">
+  <form id="contact-form">
+  <input type="email" name="email" placeholder="Your email" required>
+  <textarea name="message" placeholder="Your message" required></textarea>
+  <button type="submit">Send</button>
+</form>
+
+<div id="form-status" style="opacity:0; transition: opacity 0.5s; color:green; margin-top:10px;"></div>
+</div>
+</div>
+
+    </div>
+</section>
+
+        </div>
+
+
+        <script>
+
+const cards = document.querySelectorAll(".card");
+
+cards.forEach(card => {
+    card.addEventListener("click", (e) => {
+
+        e.stopPropagation();
+        cards.forEach(c => {
+            if (c !== card) {
+                c.classList.remove("flip");
+            }
+        });
+        card.classList.toggle("flip");
+    });
+});
+
+
+
+const form = document.getElementById('contact-form');
+const status = document.getElementById('form-status');
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault(); 
+
+  const data = {
+    email: form.email.value,
+    message: form.message.value
+  };
+  fetch('https://formspree.io/f/mgopzpqg', {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  })
+  .then(response => {
+    if (response.ok) {
+      status.innerText = 'Message sent successfully!';
+      status.style.opacity = '1';
+      form.reset();
+
+      setTimeout(() => { status.style.opacity = '0'; }, 3000);
+    } else {
+      
+      status.innerText = 'Oops! Something went wrong.';
+      status.style.opacity = '1';
+      setTimeout(() => { status.style.opacity = '0'; }, 3000);
+    }
+  })
+  .catch(() => {
+    status.innerText = 'Oops! Something went wrong.';
+    status.style.opacity = '1';
+    setTimeout(() => { status.style.opacity = '0'; }, 3000);
+  });
+});
+
+
+
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navlinks");
+
+    menuToggle.onclick = function () {
+        navLinks.classList.toggle("active");
+    };
+
+     
+    document.addEventListener("click", function(e) {
+        if(navLinks.classList.contains("active") &&
+           !navLinks.contains(e.target) &&
+           e.target !== menuToggle) {
+            navLinks.classList.remove("active");
+        }
+    });
+  window.onbeforeunload = function () {
+    localStorage.setItem("scrollPosition", window.scrollY);
+  };
+
+  window.onload = function () {
+    const scrollPosition = localStorage.getItem("scrollPosition");
+    if (scrollPosition) {
+      window.scrollTo(0, scrollPosition);
+    }
+  };
+
+ 
+</script>
+        
+ </body>
+</html>
